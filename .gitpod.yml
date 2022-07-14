@@ -3,6 +3,7 @@ image:
 
 tasks:
   - init: |
-      sudo touch /workspace/supervisor-bug/root-file.empty
+      sudo echo "empty" > /workspace/supervisor-bug/root-file.empty
+      sudo chown root /workspace/supervisor-bug/root-file.empty
   - command: |
       cat /workspace/supervisor-bug/root-file.empty
