@@ -3,7 +3,7 @@ image:
 
 tasks:
   - init: |
-      sudo echo "empty" > /workspace/supervisor-bug/root-file.empty
-      sudo chown root /workspace/supervisor-bug/root-file.empty
+      docker run -v /workspace/supervisor-bug/:/dasta alpine sh -c "touch /data/root-file.empty"
+
   - command: |
       cat /workspace/supervisor-bug/root-file.empty
