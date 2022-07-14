@@ -3,7 +3,6 @@ image:
 
 tasks:
   - init: |
-      docker run -v /workspace/supervisor-bug/:/data alpine sh -c "touch /data/root-file.empty"
-
+      docker compose up
   - command: |
-      cat /workspace/supervisor-bug/root-file.empty
+      echo "done"
