@@ -2,6 +2,7 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - name: Create file owned by root
-    command: |
+  - init: |
       sudo touch /workspace/supervisor-bug/root-file.empty
+  - command: |
+      cat /workspace/supervisor-bug/root-file.empty
