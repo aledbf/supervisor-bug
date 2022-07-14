@@ -3,7 +3,7 @@ image:
 
 tasks:
   - init: |
-      docker compose start
+      docker compose up -d
       sleep 60
       docker compose down
   - command: |
